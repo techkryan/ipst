@@ -2,9 +2,9 @@
 [6,1,7,3,5,8,0,-1,3,2,4,5] искомое число 0 */
 "use strict";
 
-let array = [6,1,7,3,5,8,0,-1,3,2,4,5];
+const array = [6,1,7,3,5,8,0,-1,3,2,4,5];
 
-function binarySearch(array, item) {
+const binarySearch = (array, item) => {
   let start = 0;
   let end = array.length;
 
@@ -24,7 +24,7 @@ function binarySearch(array, item) {
   return -1;
 }
 
-function selectionSort(array) {
+const selectionSort = (array) => {
   for (let i = 0; i < array.length - 1; i++) {
     let indexMin = i;
     for (let j = i + 1; j < array.length; j++) {
@@ -43,6 +43,6 @@ function selectionSort(array) {
 little sense as time consumption of the latter is higher than using a search
 algorithm within an unsorted array alone */
 
-let sorted = selectionSort(array);
+const sorted = selectionSort(array);
 
 alert(`${sorted}\nIndex of 0: ${binarySearch(sorted, 0)}`);

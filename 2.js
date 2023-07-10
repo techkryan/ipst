@@ -4,7 +4,7 @@
 Определите високосный это год или нет. */
 "use strict";
 
-function getRandomInt(min, max) {
+const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
 
@@ -15,10 +15,10 @@ function getRandomInt(min, max) {
   return x >= min && x <= max;
 } */
 
-let month = getRandomInt(1, 12);
-let year = getRandomInt(1917, 2023);
+const month = getRandomInt(1, 12);
+const year = getRandomInt(1917, 2023);
 
-let months = new Map([
+const months = new Map([
   [[12,1,2], 'зима'],
   [[3,4,5], 'весна'],
   [[6,7,8], 'лето'],
@@ -27,7 +27,7 @@ let months = new Map([
 
 months.forEach((value, key) => {
   if (key.includes(month)) {
-    let isLeap = year % 4 == 0 ? 'високосный' : 'невисокосный';
+    const isLeap = year % 4 == 0 ? 'високосный' : 'невисокосный';
     alert(`${month}-й месяц ${year}-го года\n${value}, ${isLeap} год`);
   }
 });
