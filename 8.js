@@ -21,4 +21,4 @@ const object = {
 console.log(getEntries(object));
 
 // // Or, alternatively
-// console.log(Object.entries(obj));
+// console.log(Object.entries(object));
